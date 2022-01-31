@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 
 public class ChatBot {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner Scanner = new Scanner(System.in);
         String bot_name = "Karina";
 
@@ -14,7 +14,7 @@ public class ChatBot {
         //
         System.out.println("Please, remind your name: ");
         String input_name = Scanner.nextLine();
-        System.out.println("What a great name you have, " +input_name +"!");
+        System.out.println("What a great name you have, " + input_name + "!");
         //
         System.out.println("Let me guess your age.");
         System.out.println("Say me remainders of dividing your age by 3, 5 and 7.");
@@ -28,5 +28,24 @@ public class ChatBot {
         int num = Scanner.nextInt();
         for (int i = 0; i <= num; i++) {
             System.out.printf("%d!\n", i);
+        }
+        //
+        System.out.println("Let's test your programming knowledge.");
+        System.out.println("Why do we use methods?");
+        System.out.println("1. To repeat a statement multiple times.\n" +
+                "2. To decompose a program into several small subroutines.\n" +
+                "3. To determine the execution time of a program.\n" +
+                "4. To interrupt the execution of a program.");
+        while (true) {
+            Scanner Input = new Scanner(System.in);
+            System.out.print("");
+            int answer = Integer.parseInt(Input.next());
+
+            if (answer == 2) {
+                break;
+            } else System.out.println("Please, try again.");
+        }
+        System.out.println("Great,you right!");
+        System.out.println("Goodbye,have a nice day!");
     }
 }
