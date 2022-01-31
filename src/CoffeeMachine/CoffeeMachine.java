@@ -44,8 +44,7 @@ public class CoffeeMachine {
             this.BEANS -= beans;
             this.MONEY += money;
         } else {
-            System.out.println("Sorry, not enough " +
-                    (CUPS <= 0 ? "cups" : this.WATER - water < 0 ? "water" : this.MILK - milk < 0 ? "milk" : "beans")
+            System.out.println("Sorry, not enough " + (CUPS <= 0 ? "cups" : this.WATER - water < 0 ? "water" : this.MILK - milk < 0 ? "milk" : "beans")
                     + "!");
         }
     }
@@ -56,6 +55,7 @@ public class CoffeeMachine {
         switch (action) {
             case "buy":
                 System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:");
+
                 switch (Scanner.next()) {
                     case "1":
                         COMP_ORDER(250, 0, 16, 4);
@@ -75,13 +75,12 @@ public class CoffeeMachine {
             case "fill":
                 System.out.println("Write how many ml of water do you want to add:");
                 this.WATER += Scanner.nextInt();
-                //
+
                 System.out.println("Write how many ml of milk do you want to add:");
                 this.MILK += Scanner.nextInt();
-                //
                 System.out.println("Write how many grams of coffee beans do you want to add:");
                 this.BEANS += Scanner.nextInt();
-                //
+
                 System.out.println("Write how many disposable cups of coffee do you want to add:");
                 this.CUPS += Scanner.nextInt();
                 break;
